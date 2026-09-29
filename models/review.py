@@ -5,7 +5,7 @@ from .base import BaseModel
 class ReviewModel(BaseModel):
 
     __tablename__ = "reviews"
-
+    title = Column(String)
     text = Column(String)
     rating = Column(Integer)
 
