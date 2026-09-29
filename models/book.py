@@ -7,7 +7,9 @@ class BookModel(BaseModel):
 
     title = Column(String)
     author = Column(String)
-
+    description = Column(String)
+    published_year = Column(Integer)
+    
     user_id = Column(Integer, ForeignKey("users.id") )
 
     user = relationship("UserModel", back_populates="books")
